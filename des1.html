@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Script</title>
+    <title>lava script</title>
     <style>
-        body{
+          body{
             background-color: rgb(212, 212, 212);
             text-align: center;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -30,24 +30,28 @@
         top: 60%;
         left: 50%;
         transform: translate(-50%,-50%);
-
        }
+
     </style>
+    
 </head>
 <body>
-      <h1> Clique no batao e escreva uma mensagem
-         para exibir no quadro abaixo:</h1>
-         <button onclick="inicio()">botao</button>
-         <br><br><br>
-      <section id="resultado">
-      <p>a mensagem ira aparacer aqui</p>
-      </section>
-      <script>
+    
+    <h1>antes e depois </h1>
+    <button onclick ="inicio()">clique</button>
+    <section id="resultado">
+     <p>a mensagem irá aparecer aqui </p>
+    </section>
+
+    <script>
         function inicio(){
-             let nome = window.prompt('qual é o seu nome?')
-             let res = window.document.getElementById('resultado')
-             res.innerHTML = `<p> ola, <strong>${nome}</strong>. é um prazer te conhecer!`
+    let numero = Number(window.prompt('informe o valor que deseja')) 
+    let ant = numero-1
+    let suc = numero+1
+    let res = document.querySelector ('section#resultado')
+    res.innerHTML = `<p> o antecessor de ${numero} é de ${ant}, e o sucessor é de ${suc}`
         }
-      </script>
+        </script>
+    
 </body>
 </html>

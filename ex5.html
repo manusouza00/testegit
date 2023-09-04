@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java script</title>
+    <style>
+        body{
+            background-color: rgb(212, 212, 212);
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        button{
+            background-color: black;
+            color: rgb(255, 255, 255);
+            padding: 10px 30px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        button:hover{
+            background-color: aliceblue;
+       }
+       section{
+        background-color: rgb(118, 118, 119);
+        padding: 20px;
+        border-radius: 10px;
+        width: 400px;
+        height: 300px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+       }
+    </style>
+</head>
+<body>
+    <h1>aprendendo a utilizar operadores aritmeticos</h1>
+    <h2> adicao </h2>
+    <button onclick="adicao()">inicio</button>
+    <button onclick="subtracao()">subtraçao</button>
+    <button onclick="multiplicacao()">multiplicacao</button>
+    <button onclick="divisao()">divisao</button>
+    <section id="resultado">
+     <p> </p>
+    </section>
+
+    <script>
+        function adicao(){
+            let n1 = Number(window.prompt('informe o primeiro valor:'))
+            let n2 = Number(window.prompt('infrome o segundo valor:'))
+            let n3 = n1+n2 
+            let res = document.querySelector('section#resultado')
+              res.innerHTML = `<p> O resultado é ${n3}!</p>`  
+        }
+        function subtracao(){
+            let n1 = Number(window.prompt('informe o primeiro valor:'))
+            let n2 = Number(window.prompt('infrome o segundo valor:'))
+            let n3 = n1-n2 
+            let res = document.querySelector('section#resultado')
+              res.innerHTML = `<p> O resultado é ${n3}!</p>`  
+        }
+        function multiplicacao(){
+            let n1 = Number(window.prompt('informe o primeiro valor:'))
+            let n2 = Number(window.prompt('infrome o segundo valor:'))
+            let n3 = n1*n2 
+            let res = document.querySelector('section#resultado')
+              res.innerHTML = `<p> O resultado é ${n3}!</p>`  
+                }
+
+                function divisao(){
+            let n1 = Number(window.prompt('informe o primeiro valor:'))
+            let n2 = Number(window.prompt('infrome o segundo valor:'))
+            let n3 = n1/n2 
+            let res = document.querySelector('section#resultado')
+              res.innerHTML = `<p> O resultado é ${n3}!</p>`  
+                }
+    </script>
+    
+</body>
+</html>
