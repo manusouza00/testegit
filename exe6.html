@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java Script</title>
+    <style>
+        body{
+            background-color: rgb(26,131,83);
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        button{
+            background-color: black;
+            color: rgb(26, 131, 83);
+            padding: 10px 30px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        button:hover{
+            background-color: azure;
+        }
+        section{
+            background-color: aliceblue;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>calculando média do aluno</h1>
+    <button onclick="media()">clique para calcular</button>
+    <section id="situacao">
+        <p></p>
+    </section>
+    <script>
+        function media(){
+          let nome= window.prompt("qual o nome do aluno")
+          let n1 = Number(window.prompt(`qual foi a primeira de ${nome}?`))
+          let n2 = Number(window.prompt(`qual foi a segunda de ${nome}?`))
+          let med=(n1+n2)/2
+           let msg //criar variavel e deixar ela vazia 
+          if (med=>6){
+            msg= 'parabens!!'
+          } else{
+            msg= 'estude um pouco mais!'
+          }
+
+          let res= document.getElementById('situacao')
+          res.innerHTML = `<p> calculando a media final de <strong>${nome}</strong.`
+          res.innerHTML += `<p> as notas obtidas foram ${n1} e ${n2}.`
+          res.innerHTML += `<p> A media final sera ${med}`
+          res.innerHTML += `<p> a mensagem que temos é: ${msg}`  
+
+           }
+    </script>
+</body>
+</html>
